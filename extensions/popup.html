@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      width: 260px;
+      background: #1a1a1c;
+      color: #fff;
+      font-family: sans-serif;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #111;
+      color: #fff;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #4da3ff;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: #2a2a2d;
+      margin-top: 8px;
+    }
+
+    .status {
+      font-size: 12px;
+      margin-top: 8px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <input id="apiKey" placeholder="API key" />
+
+  <button id="save">Save</button>
+  <button id="openSettings" class="secondary">Open full settings</button>
+
+  <div id="status" class="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
