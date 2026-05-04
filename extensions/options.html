@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>UC Icon Library Settings</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f0f10;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 420px;
+      background: #1a1a1c;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 8px 0;
+    }
+
+    p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #4da3ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #111;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 16px;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+      border-color: #4da3ff;
+      box-shadow: 0 0 0 2px rgba(77,163,255,0.2);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #2a2a2d;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:hover {
+      background: #3a3a3d;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .primary {
+      background: #4da3ff;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .primary:hover {
+      background: #6ab0ff;
+    }
+
+    .status {
+      font-size: 13px;
+      margin-top: 14px;
+      color: #aaa;
+    }
+
+    .status.success {
+      color: #4caf50;
+    }
+
+    .status.error {
+      color: #ff4d4f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>UC Icon Library</h1>
+    <p>
+      Enter your API key from
+      <a href="https://unfolded.tools/settings" target="_blank">
+        unfolded.tools/settings
+      </a>
+    </p>
+
+    <label>API Key</label>
+    <input id="apiKey" type="password" placeholder="Paste your API key">
+
+    <div class="actions">
+      <button id="test">Test</button>
+      <button id="save" class="primary">Save</button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
